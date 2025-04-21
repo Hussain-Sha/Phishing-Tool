@@ -1,0 +1,722 @@
+[
+    {
+        "subject": "Confirm your email",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Welcome to Snapchat ",
+        "sender": "Team Snapchat <team@e.snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "HEC NCEAC Data required for Fall 2021",
+        "sender": "h.ahmed@riphah.edu.pk",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Please confirm your email address on Quizlet",
+        "sender": "Quizlet <no-reply@quizlet.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Welcome to Quizlet!",
+        "sender": "Quizlet <newsletter@lifecycle.quizlet.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Welcome to Networking Academy: Activate Your Account.",
+        "sender": "Networking Academy Team <noreply@netacad.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "SAP Fiori Login Details",
+        "sender": "Hussain Ahmed <h.ahmed@riphah.edu.pk>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Account Locked",
+        "sender": "\"Cisco.com\" <no-reply@mail-id.cisco.com>",
+        "status": "Spam"
+    },
+    {
+        "subject": "Course Enrollment Notification",
+        "sender": "Networking Academy Team <noreply@netacad.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Cisco password reset request",
+        "sender": "\"Cisco.com\" <no-reply@mail-id.cisco.com>",
+        "status": "Spam"
+    },
+    {
+        "subject": "Course Enrollment Notification",
+        "sender": "Networking Academy Team <noreply@netacad.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Prepostseo Account Details",
+        "sender": "Prepost SEO <support@prepostseo.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "IICT ( 33356 )",
+        "sender": "\"Taqi Shah (via Google Docs)\" <taqishah427@gmail.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "IICT ( 33356 ).docx",
+        "sender": "\"Taqi Shah (via Google Docs)\" <taqishah427@gmail.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Welcome to join WPS Office",
+        "sender": "WPS Office <noreply@wps.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Untitled form",
+        "sender": "taqishah427@gmail.com",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Document (10).docx",
+        "sender": "\"Taqi Shah (via Google Docs)\" <taqishah427@gmail.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "taqishah427@gmail.com, complete your registration to Brainly!",
+        "sender": "\"Aadya from Brainly.in\" <no-reply@account.brainly.in>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "RE: Job Offer - Test Analyst ",
+        "sender": "Syeda Ausaf Fatima <ausaf.fatima@riskassociates.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Your BAHL Account Has Been Activated",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Subscription of BAHL E-Statement Service",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Bank AL Habib Ltd ( PayPak Debit Card )",
+        "sender": "\"Bank AL Habib\" <Feedback@bankalhabib.com>",
+        "status": "Spam"
+    },
+    {
+        "subject": "OTP for BAHL Debit Card Activation",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Login from Non-Trusted Device",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Trusted Device Registration",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Trusted Device Registration",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Congratulations! You have received a new digital credential from the Cisco Networking Academy",
+        "sender": "Networking Academy Team <noreply@netacad.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Add Beneficiary",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Electronic Funds Transfer",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Activation of Debit Card",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "E-Statement - [BAHL](SI:629237)Statement of SYED HUSSAIN ABID",
+        "sender": "\"BAHL eStatement Admin\" <estatement@bankalhabib.com>",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card \u2013 ATM Receipt Transaction",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card \u2013 ATM Receipt Transaction",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Inter Bank Fund Transfer - Credit",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card \u2013 ATM Receipt Transaction",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Verify your email to receive Course alerts",
+        "sender": "Coursary Signup <signup@coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Please verify your email to get course alerts",
+        "sender": "Coursary Signup <signup@coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Welcome to Coursary",
+        "sender": "Coursary Welcome <signup@coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "We all have gaps in our communication, learn soft skills to show your\r\n value.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Nutrition is the base of life that everyone should know!",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Leadership skills help you think bigger, and create influence",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Trending courses for you this week",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Learn Digital Marketing, grow your career by helping companies grow\r\n online",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Congratulations! You have received a new digital credential from the Cisco Networking Academy",
+        "sender": "Networking Academy Team <noreply@netacad.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "The weekend's here, learn to be an entrepreneur and work for\r\n yourself!",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Update your photography skills to capture better photos",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Improve yourself, take a personal development course",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Every company will need cloud computing, learn this in demand skill.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Learn the key skills to be effective in sales.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Turning data into business insights, companies will want you for\r\n this.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "BAHL Debit Card \u2013 ATM Receipt Transaction",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Trending Courses for you this week",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "We all have gaps in our communication, learn soft skills to show your\r\n value.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Nutrition is the base of life that everyone should know!",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Leadership skills help you think bigger, and create influence",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Upgrade your business knowledge, from personal finance to business\r\n strategies",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Trending courses for you this week",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Learn Digital Marketing, grow your career by helping companies grow\r\n online",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Electronic Funds Transfer",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "The weekend's here, learn to be an entrepreneur and work for\r\n yourself!",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Update your photography skills to capture better photos",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Improve yourself, take a personal development course",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Every company will need cloud computing, learn this in demand skill.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Last chance! Apply for the $100,000 Global Student Prize",
+        "sender": "\"Chegg\" <chegg@emails.chegg.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Learn the key skills to be effective in sales.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Turning data into business insights, companies will want you for\r\n this.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Trending Courses for you this week",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "We all have gaps in our communication, learn soft skills to show your\r\n value.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "\u062a\u0642\u06cc,",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Nutrition is the base of life that everyone should know!",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "\u062a\u0642\u06cc,",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Leadership skills help you think bigger, and create influence",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Digital Banking Account Lock",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Digital Banking Account Lock",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Failed Login Attempt",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Upgrade your business knowledge, from personal finance to business\r\n strategies",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Snapchat Password Reset",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Snapchat Password Changed",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "New Snapchat Login",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Trending courses for you this week",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Inter Bank Fund Transfer - Credit",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card \u2013 ATM Receipt Transaction",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Learn Digital Marketing, grow your career by helping companies grow\r\n online",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "BAHL Debit Card - Cash Withdrawal",
+        "sender": "info@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Login from Non-Trusted Device",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "\u062a\u0642\u06cc,",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "The weekend's here, learn to be an entrepreneur and work for\r\n yourself!",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "\u062a\u0642\u06cc,",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Update your photography skills to capture better photos",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "\u062a\u0642\u06cc,",
+        "sender": "Team Snapchat <no_reply@snapchat.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Improve yourself, take a personal development course",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Congratulations! You have received a new digital credential from the Cisco Networking Academy",
+        "sender": "Networking Academy Team <noreply@netacad.com>",
+        "status": "Spam (Potential Phishing)"
+    },
+    {
+        "subject": "Successful Login",
+        "sender": "netbanking@bankalhabib.com",
+        "status": "Spam"
+    },
+    {
+        "subject": "Every company will need cloud computing, learn this in demand skill.",
+        "sender": "Course Updates <alert@notify.coursary.com>",
+        "status": "Spam (Potential Phishing)"
+    }
+]
