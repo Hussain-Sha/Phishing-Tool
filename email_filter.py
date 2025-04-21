@@ -205,8 +205,8 @@ def append_to_file(file_path, data):
         print(f"Error appending to file {file_path}: {e}")
 
 def move_to_spam():
-    username = ""  # Use your Gmail email address
-    password = ""
+    username = "taqishah427@gmail.com"  # Use your Gmail email address
+    password = "uuwu gzrg ptnl pxwf" # Put here app password 
     imap_server = "imap.gmail.com"  # Gmail IMAP server
 
     # Login to Gmail
