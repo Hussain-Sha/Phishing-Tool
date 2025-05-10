@@ -1,0 +1,16 @@
+# Keyword-based spam detection logic
+def check_for_phishing_keywords(subject, body):
+    phishing_keywords = [
+        "verify your account", "urgent action required", "click here", "login immediately",
+        "update your information", "your account has been suspended", "password expired",
+        "reset your password", "unauthorized login attempt", "win a prize", "congratulations",
+        "claim now", "limited time offer", "security alert", "free", "act now", "urgent",
+        "you have been selected", "bank account", "confirm", "credit card", "earn money",
+        "100% free", "guaranteed", "risk-free", "winner"
+    ]
+
+    combined_text = f"{subject} {body}".lower()
+    for keyword in phishing_keywords:
+        if keyword in combined_text:
+            return True
+    return False
