@@ -1,0 +1,246 @@
+import streamlit as st
+import imaplib
+import email
+import json
+import os
+import pandas as pd
+import re
+from email.header import decode_header
+from urllib.parse import urlparse
+import plotly.express as px
+
+# ---------------------- Config ----------------------
+EMAIL_USER = "33356@students.riphah.edu.pk"
+EMAIL_PASS = "ribs zrev wjuw taox"
+IMAP_SERVER = "imap.gmail.com"
+TRUSTED_LINKS_FILE = 'realistic_trusted_links.csv'
+WHITELIST_SENDERS_FILE = 'realistic_whitelisted_senders.csv'
+PROCESSED_EMAILS_FILE = "processed_emails.json"
+SPAM_EMAILS_FILE = "spam_emails.json"
+
+# ---------------------- Load CSV Lists ----------------------
+def load_list(file_path, column_name):
+    if not os.path.exists(file_path):
+        return []
+    data = pd.read_csv(file_path)[column_name].dropna().tolist()
+    return [item.strip().lower() for item in data]
+
+TRUSTED_LINKS = load_list(TRUSTED_LINKS_FILE, 'domain')
+WHITELIST_SENDERS = [item.split('@')[-1] for item in load_list(WHITELIST_SENDERS_FILE, 'sender')]
+
+# ---------------------- Helpers ----------------------
+def decode_email(content):
+    if content is None:
+        return ""
+    decoded_bytes, encoding = decode_header(content)[0]
+    if isinstance(decoded_bytes, bytes):
+        return decoded_bytes.decode(encoding or 'utf-8', errors="ignore")
+    return decoded_bytes
+
+def extract_domain(sender):
+    match = re.search(r'@([a-zA-Z0-9.-]+)>?', sender)
+    return match.group(1).lower() if match else ""
+
+def is_whitelisted(sender):
+    return extract_domain(sender) in WHITELIST_SENDERS
+
+def extract_links(body):
+    return re.findall(r"https?://[^\s<>\"]+", body)
+
+def get_base_domain(link):
+    try:
+        return urlparse(link).netloc.lower()
+    except:
+        return ""
+
+def contains_suspicious_links(links):
+    for link in links:
+        domain = get_base_domain(link)
+        if domain not in TRUSTED_LINKS:
+            return True
+    return False
+
+def detect_phishing_keywords(subject, body):
+    suspicious_keywords = [
+        # Credential harvesting
+        "verify your account", "login required", "account suspended", "reset your password", "unauthorized access",
+
+        # Financial scams / BEC
+        "wire transfer", "urgent payment", "invoice attached", "bank details update", "payment overdue",
+
+        # Spear phishing / whaling
+        "confidential", "legal action", "private meeting", "executive request", "internal audit",
+
+        # Malware / attachments
+        "download attachment", "view document", "install update", "open invoice", ".exe", ".scr", ".zip",
+
+        # Extortion
+        "we recorded you", "send bitcoin", "pay ransom", "your computer has been hacked"
+    ]
+
+    combined_text = f"{subject} {body}".lower()
+    matches = [kw for kw in suspicious_keywords if kw in combined_text]
+    return bool(matches), matches
+
+def classify_email(body, sender, subject=""):
+    if is_whitelisted(sender):
+        return 'Ham'
+
+    links = extract_links(body)
+    has_suspicious_links = links and contains_suspicious_links(links)
+
+    has_keywords, matched = detect_phishing_keywords(subject, body)
+
+    if has_suspicious_links or has_keywords:
+        return 'Spam'
+    return 'Ham'
+
+def delete_old_data():
+    for file in [PROCESSED_EMAILS_FILE, SPAM_EMAILS_FILE]:
+        if os.path.exists(file):
+            os.remove(file)
+
+def safe_text(text):
+    return text.replace("<", "&lt;").replace(">", "&gt;")
+
+# ---------------------- Email Scanning ----------------------
+def scan_selected_emails(choice, N):
+    delete_old_data()
+    ham_list, spam_list = [], []
+
+    try:
+        mail = imaplib.IMAP4_SSL(IMAP_SERVER)
+        mail.login(EMAIL_USER, EMAIL_PASS)
+        mail.select("inbox")
+
+        _, messages = mail.search(None, "ALL")
+        email_ids = messages[0].split()
+
+        if choice == "Latest N":
+            email_ids = email_ids[-N:]
+        elif choice == "First N":
+            email_ids = email_ids[:N]
+
+        for eid in email_ids:
+            _, msg_data = mail.fetch(eid, "(RFC822)")
+            for response in msg_data:
+                if isinstance(response, tuple):
+                    msg = email.message_from_bytes(response[1])
+                    subject = decode_email(msg.get("Subject"))
+                    sender = decode_email(msg.get("From"))
+                    body = ""
+
+                    if msg.is_multipart():
+                        for part in msg.walk():
+                            if part.get_content_type() == "text/plain":
+                                body = part.get_payload(decode=True).decode(errors="ignore")
+                                break
+                    else:
+                        body = msg.get_payload(decode=True).decode(errors="ignore")
+
+                    result = classify_email(body, sender, subject)
+                    email_data = {"subject": subject, "sender": sender, "status": result}
+
+                    if result == "Spam":
+                        spam_list.append(email_data)
+                    else:
+                        ham_list.append(email_data)
+
+        with open(PROCESSED_EMAILS_FILE, "w") as f:
+            json.dump(ham_list, f, indent=4)
+        with open(SPAM_EMAILS_FILE, "w") as f:
+            json.dump(spam_list, f, indent=4)
+
+        mail.logout()
+        return len(spam_list), len(ham_list), ham_list, spam_list
+
+    except imaplib.IMAP4.abort as e:
+        st.error(f"❌ IMAP connection failed: {str(e)}")
+        return 0, 0, [], []
+
+def load_emails(file):
+    if os.path.exists(file):
+        with open(file, "r") as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return []
+    return []
+
+# ---------------------- Streamlit UI ----------------------
+st.set_page_config(page_title="📧 Phishing Detection Dashboard", layout="wide")
+
+st.markdown("""
+    <style>
+    .email-card {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .spam-card {
+        background-color: #fdecea;
+        border-left: 5px solid #e53935;
+    }
+    .ham-card {
+        background-color: #e6f4ea;
+        border-left: 5px solid #43a047;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.title("📧 Phishing Detection Dashboard")
+
+if 'result_shown' not in st.session_state:
+    st.session_state.result_shown = False
+
+st.subheader("📌 Select Emails to Scan")
+col1, col2 = st.columns([2, 1])
+with col1:
+    choice = st.radio("Choose email range:", ["Latest N", "First N", "All"], horizontal=True)
+with col2:
+    N = st.number_input("Enter N", min_value=1, max_value=100, value=10)
+
+if st.button("🔍 Scan Emails Now"):
+    st.session_state.result_shown = False
+    if choice == "All":
+        N = 10000
+    spam_count, ham_count, ham_emails, spam_emails = scan_selected_emails(choice, N)
+    st.session_state.ham_emails = ham_emails
+    st.session_state.spam_emails = spam_emails
+    st.session_state.result_shown = True
+
+if st.session_state.result_shown:
+    total_emails = len(st.session_state.ham_emails) + len(st.session_state.spam_emails)
+    if total_emails > 0:
+        pie_data = pd.DataFrame({
+            "Category": ["Ham", "Spam"],
+            "Count": [len(st.session_state.ham_emails), len(st.session_state.spam_emails)]
+        })
+        fig_pie = px.pie(pie_data, names='Category', values='Count', title='Ham vs Spam Ratio',
+                         color_discrete_sequence=["#4CAF50", "#E53935"])
+        st.plotly_chart(fig_pie, use_container_width=True)
+
+    tab1, tab2 = st.tabs(["✅ Ham Emails", "🚫 Spam Emails"])
+
+    with tab1:
+        st.markdown(f"### ✅ Showing {len(st.session_state.ham_emails)} Ham Emails")
+        for email in st.session_state.ham_emails:
+            st.markdown(f"""
+            <div class="email-card ham-card">
+                <strong>{safe_text(email.get("subject", "No Subject"))}</strong><br>
+                From: {safe_text(email.get("sender", "Unknown"))}
+            </div>
+            """, unsafe_allow_html=True)
+
+    with tab2:
+        st.markdown(f"### 🚫 Showing {len(st.session_state.spam_emails)} Spam Emails")
+        for email in st.session_state.spam_emails:
+            st.markdown(f"""
+            <div class="email-card spam-card">
+                <strong>{safe_text(email.get("subject", "No Subject"))}</strong><br>
+                From: {safe_text(email.get("sender", "Unknown"))}<br>
+                Status: {safe_text(email.get("status", "Spam"))}
+            </div>
+            """, unsafe_allow_html=True)
