@@ -1,0 +1,24 @@
+def classify_email_combined(body, sender, trusted_links, whitelist_senders):
+    # Extract sender domain
+    match = re.search(r'@([a-zA-Z0-9.-]+)>?', sender)
+    sender_domain = match.group(1).lower() if match else ""
+
+    # Check if sender is whitelisted
+    if sender_domain in whitelist_senders:
+        return 'Ham'
+
+    # Extract links
+    url_pattern = r"https?://[^\s<>\"]+"
+    links = re.findall(url_pattern, body)
+
+    # Check for suspicious links
+    for link in links:
+        try:
+            domain = urlparse(link).netloc.lower()
+            if domain not in trusted_links:
+                print(f"Suspicious link found: {link}")
+                return 'Spam (Suspicious Link)'
+        except:
+            continue
+
+    return 'Ham'
